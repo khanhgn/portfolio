@@ -1,41 +1,32 @@
-import React from "react";
-import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
-
-import { styles } from "../style";
-import { services } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
-
-        <h3 className="text-white text-[20px] font-bold text-center cursor-default">
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Tilt } from 'react-tilt';
+import { profilePic } from '../assets';
+import { styles } from '../style';
+import { SectionWrapper } from '../hoc';
+import { fadeIn, textVariant } from '../utils/motion';
+import Tech from './Tech';
 
 const About = () => {
+  const [profileImageLoaded, setProfileImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    // This function will be called when the profile image has loaded.
+    setProfileImageLoaded(true);
+  };
+
+  // Define animation variants for the profile image
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -46,24 +37,32 @@ const About = () => {
           About me.
         </h2>
       </motion.div>
-
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I'm a full-stack developer with experience in JavaScript, and expertise
-        in frameworks like React, Node.js, and Three.js. I'm a quick learner and
-        collaborate closely with clients to create efficient and user-friendly
-        solutions. I really appreciate your immediate attention to this matter!
-      </motion.p>
-
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+      <div className="grid grid-cols-10">
+      <div className='col-span-4'>
+          <motion.img
+              src={profilePic}
+              alt="Your Name"
+              className="w-80 h-80 object-cover rounded-full"
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={imageVariants}
+              onLoad={handleImageLoad}
+            />
+        </div>
+        <div className="col-span-6">
+          <motion.p
+            variants={fadeIn('', '', 0.1, 1)}
+            className="mt-4 text-secondary text-[17px] max-w-4xl leading-[30px] flex-1"
+          >
+            I'm an aspiring full-stack developer with experience in JavaScript, and expertise
+            in frameworks like React, and Node.js. I'm a quick learner and very keen to get more industry experience!
+          </motion.p>
+        </div>
       </div>
+      <Tech />
     </>
   );
 };
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(About, 'about');
