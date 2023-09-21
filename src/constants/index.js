@@ -28,6 +28,8 @@ import {
     portfolioSite,
     mlrmodel,
     winecluster,
+    rstudtio,
+    python,
   } from "../assets";
   
   export const navLinks = [
@@ -66,6 +68,14 @@ import {
   
   const technologies = [
     {
+      name: "R",
+      icon: rstudtio,
+    },
+    {
+      name: "Python",
+      icon: python,
+    },
+    {
       name: "HTML 5",
       icon: html,
     },
@@ -84,10 +94,6 @@ import {
     {
       name: "React JS",
       icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
     },
     {
       name: "Tailwind CSS",
