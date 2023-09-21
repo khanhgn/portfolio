@@ -19,10 +19,15 @@ import {
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
+    uhs,
+    squad,
+    csClub,
+    ubique,
     threejs,
+    sentiment,
+    portfolioSite,
+    mlrmodel,
+    winecluster,
   } from "../assets";
   
   export const navLinks = [
@@ -116,55 +121,54 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      title: "Full-stack Developer",
+      company_name: "Ubique Magazine",
+      icon: ubique,
+      iconBg: "#FFFFFF",
+      date: "March 2022 - Jan 2023",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Developing and maintaining web app using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, writers and editors",
         "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Spearheaded the project with a management plan and regular meetings",
       ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
-      iconBg: "#E6DEDD",
+      title: "President of Game Dev Club",
+      company_name: "The University High School",
+      icon: uhs,
+      iconBg: "#FFFFFF",
       date: "Jan 2021 - Feb 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Mentored and taught younger students the fundamentals of game development using tools such as Unity, Blender, C++, and C#, fostering their passion for the field.",
+        "Organized and participated in nationwide game development competitions, showcasing proficiency in game design and programming on a larger scale.",
+        "Successfully hosted game jams, promoting collaboration and innovation within the club and providing members with hands-on experience in game development.",
+        "Served as the President of the Game Dev Club, demonstrating leadership and organizational skills. Contributed to the growth of the club's membership, attracting students with a shared interest in game development.",
       ],
     },
     {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
+      title: "Committee member",
+      company_name: "Society for quantitative analysis and data science",
+      icon: squad,
+      iconBg: "#FFFFFF",
       date: "Jan 2022 - Jan 2023",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Collaborated with fellow committee members to plan and execute events, workshops, and initiatives related to quantitative analysis and data science.",
+        "Seek sponsorships and meet with companies such as PWC and Janestreet",
+        "Played a pivotal role in organizing educational seminars and workshops, providing opportunities for members to enhance their skills in data analysis, statistics, and related fields.",
+        "Fostered a sense of community and networking among members, facilitating connections and knowledge-sharing in the field of quantitative analysis and data.",
       ],
     },
     {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
+      title: "Committee member",
+      company_name: "CS Club Adelaide",
+      icon: csClub,
+      iconBg: "#FFFFFF",
       date: "Jan 2023 - Present",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Collaborated with other club members or experts in the field to ensure the workshops were informative, up-to-date, and aligned with industry trends.",
+        "Shared resources, tutorials, and reference materials with workshop participants, enabling them to continue their AI learning journey beyond the workshops.",
+        "Contributed to the broader mission of the Computer Science Club by advancing members' knowledge and skills in emerging technologies like ML, which are increasingly important in the field of computer science.",
       ],
     },
   ];
@@ -172,92 +176,117 @@ import {
   const testimonials = [
     {
       testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
+        "The website that Khanh has created for my yoga studio has improved its success dramatically.",
+      name: "Vi Truong",
+      designation: "Owner",
+      company: "Grasse yoga studio",
+      image: "https://randomuser.me/api/portraits/women/8.jpg",
+    },
+    {
+      testimonial:
+        "On my arrival to University High School, it was clear to me that Khanh was the glue that bound together much of this vibrant learning community.",
+      name: "Christopher Bush",
+      designation: "Head of Student Voice and Leadership",
+      company: "UHS",
+      image: "https://media.licdn.com/dms/image/C5603AQHzsPqYsie7sg/profile-displayphoto-shrink_400_400/0/1628403687989?e=1700697600&v=beta&t=T5kLdOY0jmiEbGJo7ypooGCSzze1ZwsbjEkofPwdWA0",
+    },
+    {
+      testimonial:
+        "He just wanted to help the others out. It quickly became apparent that this interaction is typical of the selfless generosity of Khanh.",
+      name: "Briget Costelloe",
+      designation: "Head of English and Literature",
+      company: "UHS",
       image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
     },
   ];
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Did our playlists catch the pandemic blues?",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Sentiment analysis on Australians' daily top 200 songs during COVID-19 compared to pre-pandemic",
+      tags: [
+        {
+          name: "Python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "R",
+          color: "green-text-gradient",
+        },
+        {
+          name: "NLTK",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Seaborn",
+          color: "white-text-gradient",
+        },
+      ],
+      image: sentiment,
+      source_code_link: "https://github.com/khanhgn/covid19-sentiment-analysis",
+    },
+    {
+      name: "Prediction Model for forest fires",
+      description:
+        "A multiple linear regression model incorporating various weather indices to forecast the occurrence and behavior of forest fires.",
+      tags: [
+        {
+          name: "python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "R",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Excel",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: mlrmodel,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "Classifying wine based on regions with K-means clusterning",
+      description:
+        "An unsupervised Machine Learning project that aims to classify wine samples to 3 different regions which corresponds to 3 different wineries in Spain.",
+      tags: [
+        {
+          name: "python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "R",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Excel",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: winecluster,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "Portfolio website",
+      description:
+        "A portfolio website that displays my projects and experiences :D",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Threejs",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "tailwind CSS",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
+      image: portfolioSite,
       source_code_link: "https://github.com/",
     },
   ];

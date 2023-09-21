@@ -6,7 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import profilePic from "./NAM_5531.jpg";
+import profilePic from "./result.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -26,10 +26,19 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import squad from "./company/SQUAD.png";
+import ubique from "./company/ubique.png";
+import uhs from "./company/uhs.png";
+import csClub from "./company/csclub.png";
+
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import sentiment from "./sentiment_analysis.png";
+import portfolioSite from "./portfolio_site.png";
+import mlrmodel from "./MLRmodel.png";
+import winecluster from "./knn.png";
 
 export {
   profilePic,
@@ -61,4 +70,12 @@ export {
   carrent,
   jobit,
   tripguide,
+  sentiment,
+  portfolioSite,
+  mlrmodel,
+  winecluster,
+  csClub,
+  squad,
+  uhs,
+  ubique,
 };
